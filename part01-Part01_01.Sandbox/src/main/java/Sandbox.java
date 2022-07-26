@@ -4,16 +4,14 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-        int number = 5;
+        Scanner reader = new Scanner(System.in);
         
-        if (number == 0) {
-            System.out.println("The number is zero.");
-        } else if (number > 0) {
-            System.out.println("The number is greater than zero.");
-        } else if (number > 2) {
-            System.out.println("The number is greater than two.");
+        int number = Integer.valueOf(reader.nextLine());
+        
+        if (number % 400 == 0) {
+            System.out.println("The number " + number + " is divisible by four hundred.");
         } else {
-            System.out.println("The number is less than zero.");
+            System.out.println("The number " + number + " is not divisible by four hundred.");
         }
     }
 }
