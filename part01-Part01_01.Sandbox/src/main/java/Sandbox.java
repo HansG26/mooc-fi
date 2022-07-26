@@ -4,14 +4,12 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-        int number = 55;
-        
-        if (number != 0) {
-            System.out.println("The number is not equal to 0");
-        }
-        
-        if (number >= 1000) {
-            System.out.println("The number is at least 1000");
-        }
+            int number = 4;
+            
+            if (number > 5) {
+                System.out.println("Your number is greater than five");
+            } else {
+                System.out.println("Your number is five or less!");
+            }
     }
 }
