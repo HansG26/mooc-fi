@@ -4,12 +4,16 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-            int number = 4;
-            
-            if (number > 5) {
-                System.out.println("Your number is greater than five");
-            } else {
-                System.out.println("Your number is five or less!");
-            }
+        int number = 3;
+        
+        if (number == 1) {
+            System.out.println("The number is one");
+        } else if (number == 2) {
+            System.out.println("The given number is two");
+        } else if (number == 3) {
+            System.out.println("The given number is three!");
+        } else {
+            System.out.println("Something else!");
+        }
     }
 }
