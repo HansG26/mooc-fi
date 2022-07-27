@@ -4,12 +4,20 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-        int number = 7;
+        Scanner scan = new Scanner(System.in);
         
-        if (!(number > 4)) {
-            System.out.println("The number is not greater than 4.");
+        System.out.println("Give a number between 1 and 100");
+        
+        int number = Integer.valueOf(scan.nextLine());
+        
+        if (number % 5 == 0 && number % 3 == 0) {
+            System.out.println("FizzBuzz");
+        } else if (number % 5 == 0) {
+            System.out.println("Fizz");
+        } else if (number % 3 == 0) {
+            System.out.println("Buzz");
         } else {
-            System.out.println("The number is greater than 4.");
+            System.out.println(number);
         }
         
     }
