@@ -6,14 +6,17 @@ public class Sandbox {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
         
-        int first = 1;
-        int second = 2;
+        int first = Integer.valueOf(reader.nextLine());
+        int second = Integer.valueOf(reader.nextLine());
         
-        first = Integer.valueOf(reader.nextLine());
-        second = Integer.valueOf(reader.nextLine());
+        int sum = first + second;
         
-        int product = first * second;
-        
-         System.out.println("The product of " + first + " and " + second + " is " + product);
+        if (sum > 100) {
+            System.out.println("too much");
+        } else if (sum < 0) {
+            System.out.println("too little");
+        } else {
+            System.out.println("ok");
+        }
     }
 }
