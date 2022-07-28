@@ -1,24 +1,19 @@
-
 import java.util.Scanner;
 
 public class Sandbox {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        // Creating the scanner
+        Scanner reader = new Scanner(System.in);
         
-        System.out.println("Give a number between 1 and 100");
+        int first = 1;
+        int second = 2;
         
-        int number = Integer.valueOf(scan.nextLine());
+        first = Integer.valueOf(reader.nextLine());
+        second = Integer.valueOf(reader.nextLine());
         
-        if (number % 5 == 0 && number % 3 == 0) {
-            System.out.println("FizzBuzz");
-        } else if (number % 5 == 0) {
-            System.out.println("Fizz");
-        } else if (number % 3 == 0) {
-            System.out.println("Buzz");
-        } else {
-            System.out.println(number);
-        }
+        int product = first * second;
         
+         System.out.println("The product of " + first + " and " + second + " is " + product);
     }
 }
