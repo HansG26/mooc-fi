@@ -7,15 +7,20 @@ public class Sandbox {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
         
-        int number = 1;
-        
         while (true) {
-            System.out.println("Exit? (y exits)");
-            if(reader.nextLine().equals("y")) {
+            System.out.println("Insert positive integers");
+            int number = Integer.valueOf(reader.nextLine());
+            
+            if(number == 0) {
                 break;
             }
+            
+            if (number <= 0) {
+                System.out.println("Unfit number! Try again.");
+                continue;
+            }
+            
+            System.out.println("Your input was " + number);
         }
-        
-        System.out.println("Ready!");
     }
 }
