@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Sandbox {
@@ -6,17 +7,15 @@ public class Sandbox {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
         
-        int first = Integer.valueOf(reader.nextLine());
-        int second = Integer.valueOf(reader.nextLine());
+        int number = 1;
         
-        int sum = first + second;
-        
-        if (sum > 100) {
-            System.out.println("too much");
-        } else if (sum < 0) {
-            System.out.println("too little");
-        } else {
-            System.out.println("ok");
+        while (true) {
+            System.out.println("Exit? (y exits)");
+            if(reader.nextLine().equals("y")) {
+                break;
+            }
         }
+        
+        System.out.println("Ready!");
     }
 }
