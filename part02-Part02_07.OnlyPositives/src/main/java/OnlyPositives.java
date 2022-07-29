@@ -12,6 +12,7 @@ public class OnlyPositives {
             
             if (number < 0) {
                 System.out.println("Unsuitable number");
+                continue;
             } 
             
             if (number == 0) {
