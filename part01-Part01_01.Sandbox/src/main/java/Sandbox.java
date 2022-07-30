@@ -6,21 +6,34 @@ public class Sandbox {
     public static void main(String[] args) {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
-        
+
+        int numberOfPositives = 0;
+        int numberOfNegatives = 0;
+
         while (true) {
-            System.out.println("Insert positive integers");
-            int number = Integer.valueOf(reader.nextLine());
-            
-            if(number == 0) {
+            System.out.println("Give a number (0 to stop): ");
+            int numberFromUser = Integer.valueOf(reader.nextLine());
+
+            if (numberFromUser == 0) {
                 break;
             }
-            
-            if (number <= 0) {
-                System.out.println("Unfit number! Try again.");
-                continue;
+
+            if (numberFromUser > 0) {
+                numberOfPositives = numberOfPositives + 1;
             }
-            
-            System.out.println("Your input was " + number);
+
+            if (numberFromUser < 0) {
+                numberOfNegatives = numberOfNegatives + 1;
+            }
+        }
+
+        System.out.println("Positive numbers: " + numberOfPositives);
+        System.out.println("Negative numbers: " + numberOfNegatives);
+
+        if (numberOfPositives + numberOfNegatives > 0) {
+            double percentageOfPositives = 100.0 * numberOfPositives / (numberOfPositives + numberOfNegatives);
+            System.out.println("Percentage of positive numbers: " + percentageOfPositives + "%");
         }
     }
+
 }
