@@ -7,12 +7,14 @@ public class Sandbox {
         // Creating the scanner
         Scanner reader = new Scanner(System.in);
         
-        int start = 3;
-        int end = 7;
+        int result = 0;
         
-        for (int i = start; i < end; i++) {
-            System.out.println(i);
+        for (int i = 0; i < 4; i++) {
+            result += 3;
         }
+        
+        System.out.println(result);
+
     }
 
 }
