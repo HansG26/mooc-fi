@@ -17,12 +17,20 @@ public class RepeatingBreakingAndRemembering {
         System.out.println("Give numbers:");
         int sum = 0;
         int numberOfNumbers = 0;
+        int even = 0;
+        int odd = 0;
         
         while (true) {
             int number = Integer.valueOf(scanner.nextLine());
             
             if (number == -1) {
                 break;
+            }
+            
+            if (number % 2 == 0) {
+                even++;
+            } else {
+                odd++;
             }
             
             sum += number;
@@ -35,6 +43,9 @@ public class RepeatingBreakingAndRemembering {
         
         double average = (double) sum / (double) numberOfNumbers;
         System.out.println("Average: " + average);
-
+        
+        System.out.println("Even: " + even);
+        System.out.println("Odd: " + odd);
+        
     }
 }
