@@ -16,6 +16,7 @@ public class RepeatingBreakingAndRemembering {
         
         System.out.println("Give numbers:");
         int sum = 0;
+        int numberOfNumbers = 0;
         
         while (true) {
             int number = Integer.valueOf(scanner.nextLine());
@@ -25,10 +26,12 @@ public class RepeatingBreakingAndRemembering {
             }
             
             sum += number;
+            numberOfNumbers++;
         }
         
         System.out.println("Thx! Bye!");
         System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + numberOfNumbers);
 
     }
 }
