@@ -4,20 +4,19 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
+        greet(1 + 2);
+        System.out.println("");
+        greet(3);
         
-        System.out.println("Let's try if we can travel to the method world:");
-        greet();
-       
-        System.out.println("Looks like we can, let's try again:");
-        greet();
-        greet();
-        greet();
-        
-
     }
     
-    public static void greet() {
-        System.out.println("Greetings from the method world!");
+    public static void greet(int numOfTimes) {
+        int i = 0;
+        
+        while(i < numOfTimes) {
+            System.out.println("Greetings!");
+            i++;
+        }
     }
-
+    
 }
