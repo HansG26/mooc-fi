@@ -4,16 +4,14 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-        
-        int number1 = 2;
-        int number2 = 4;
 
-        sum(2, 4);    
+        double number = 4 * alwaysReturnsTen() + (alwaysReturnsTen() / 2) - 8;
+        System.out.println("the result of the calculation " + number);
         
     }
-    
-    public static void sum(int first, int second) {
-        System.out.println("The sum of numbers " + first + " and " + second + " is " + (first + second));
+
+    public static int alwaysReturnsTen() {
+        return 10;
     }
-    
+
 }
