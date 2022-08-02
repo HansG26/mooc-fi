@@ -4,21 +4,28 @@ import java.util.Scanner;
 public class Sandbox {
 
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the first number: ");
-        int first = Integer.valueOf(scanner.nextLine());
-
-        System.out.println("Enter the second number: ");
-        int second = Integer.valueOf(scanner.nextLine());
+        multiplicationTable(3);
+    }
+    
+    public static void printMultiplicationTableRow(int number, int coefficient) {
+        int printable = number;
         
-        System.out.println("The combined sum of the numbers is: " + sum(first, second));
-
+        while(printable <= number * coefficient) {
+            System.out.print(" " + printable);
+            printable += number;
+        }
+        
+        System.out.println("");
     }
-
-    public static int sum(int first, int second) {
-        return first + second;
+    
+    public static void multiplicationTable(int max) {
+        int number = 1;
+        
+        while (number <= max) {
+            printMultiplicationTableRow(number, max);
+            number++;
+        }
     }
-
+    
+    
 }
