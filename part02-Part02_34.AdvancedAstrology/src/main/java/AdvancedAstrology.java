@@ -19,6 +19,10 @@ public class AdvancedAstrology {
 
     public static void printTriangle(int size) {
         // part 2 of the exercise
+        for(int i = 1; i <= size; i++) {
+            printSpaces(size - i);
+            printStars(i);
+        }
     }
 
     public static void christmasTree(int height) {
@@ -28,10 +32,6 @@ public class AdvancedAstrology {
     public static void main(String[] args) {
         // The tests are not checking the main, so you can modify it freely.
 
-        printTriangle(5);
-        System.out.println("---");
-        christmasTree(4);
-        System.out.println("---");
-        christmasTree(10);
+        printTriangle(8);
     }
 }
