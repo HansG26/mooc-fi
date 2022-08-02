@@ -3,7 +3,7 @@ public class StarSign {
 
     public static void main(String[] args) {
 
-        printSquare(4);
+        printTriangle(4);
         
     }
 
@@ -28,9 +28,15 @@ public class StarSign {
 
     public static void printRectangle(int width, int height) {
         // third part of the exercise
+        for (int i = 0; i < height; i++) {
+            printStars(width);
+        }
     }
 
     public static void printTriangle(int size) {
         // fourth part of the exercise
+        for(int i = 1; i <= size; i++) {
+            printStars(i);
+        }
     }
 }
