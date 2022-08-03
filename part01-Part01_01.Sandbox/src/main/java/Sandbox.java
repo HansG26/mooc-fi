@@ -1,31 +1,16 @@
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Sandbox {
 
     public static void main(String[] args) {
-        multiplicationTable(3);
-    }
-    
-    public static void printMultiplicationTableRow(int number, int coefficient) {
-        int printable = number;
+        ArrayList<String> wordList = new ArrayList<>();
         
-        while(printable <= number * coefficient) {
-            System.out.print(" " + printable);
-            printable += number;
-        }
+        wordList.add("first");
+        wordList.add("second");
         
-        System.out.println("");
+        System.out.println(wordList.get(1));
     }
-    
-    public static void multiplicationTable(int max) {
-        int number = 1;
-        
-        while (number <= max) {
-            printMultiplicationTableRow(number, max);
-            number++;
-        }
-    }
-    
-    
+
 }
