@@ -6,15 +6,21 @@ public class Sandbox {
 
     public static void main(String[] args) {
 
-        ArrayList<String> teachers = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         
-        teachers.add("Simon");
-        teachers.add("Samuel");
-        teachers.add("Ann");
-        teachers.add("Anna");
+        list.add("First");
+        list.add("Second");
+        list.add("Third");
         
-        for (int i = 0; i < teachers.size(); i++) {
-            System.out.println(teachers.get(i));
+        System.out.println("Is the first found? " + list.contains("First"));
+        
+        boolean found = list.contains("Second");
+        if (found) {
+            System.out.println("Second was found");
+        }
+        
+        if (list.contains("Second")) {
+            System.out.println("Second can still be found");
         }
     }
 
