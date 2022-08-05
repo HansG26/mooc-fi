@@ -6,17 +6,16 @@ public class Sandbox {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
+        ArrayList<String> teachers = new ArrayList<>();
         
-        for (int i = numbers.size() - 1; i >= 0; i--) {
-            System.out.println(numbers.get(i));
+        teachers.add("Simon");
+        teachers.add("Samuel");
+        teachers.add("Ann");
+        teachers.add("Anna");
+        
+        for (int i = 0; i < teachers.size(); i++) {
+            System.out.println(teachers.get(i));
         }
-
     }
 
 }
