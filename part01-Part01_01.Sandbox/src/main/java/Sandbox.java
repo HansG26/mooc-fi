@@ -5,20 +5,32 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
         
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(6);
+        numbers.add(-1);
+        
+        System.out.println(numbers);
+        
+        removeFirst(numbers);
+        
+        System.out.println(numbers);
+        
+        removeFirst(numbers);
+        removeFirst(numbers);
+        removeFirst(numbers);
+        
+        System.out.println(numbers);
     }
 
-    public static double average(ArrayList<Integer> numbers) {
-        if(numbers.size() == 0) {
-            return -1.0;
+    public static void removeFirst(ArrayList<Integer> numbers) {
+        if (numbers.size() == 0) {
+            return;
         }
         
-        int sum = 0;
-        for (int number: numbers) {
-            sum += number;
-        }
-        
-        return (double) sum / (double) numbers.size();
+        numbers.remove(0);
     }
 
 }
