@@ -5,32 +5,20 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
+        Scanner reader = new Scanner(System.in);
         
-        numbers.add(3);
-        numbers.add(2);
-        numbers.add(6);
-        numbers.add(-1);
+        int[] numbers = new int[5];
+        numbers[0] = 42;
+        numbers[1] = 13;
+        numbers[2] = 12;
+        numbers[3] = 7;
+        numbers[4] = 1;
         
-        System.out.println(numbers);
+        System.out.println("Which index should we access?");
+        int index = Integer.valueOf(reader.nextLine());
         
-        removeFirst(numbers);
-        
-        System.out.println(numbers);
-        
-        removeFirst(numbers);
-        removeFirst(numbers);
-        removeFirst(numbers);
-        
-        System.out.println(numbers);
-    }
-
-    public static void removeFirst(ArrayList<Integer> numbers) {
-        if (numbers.size() == 0) {
-            return;
-        }
-        
-        numbers.remove(0);
+        int number = numbers[index];
+        System.out.println(number);
     }
 
 }
