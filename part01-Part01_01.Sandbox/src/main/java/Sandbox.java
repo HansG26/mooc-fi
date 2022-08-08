@@ -5,13 +5,14 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        String greeting = "Hi ";
-        String name = "Lily";
-        String goodbye = " and see you later!";
+        System.out.println("Make sure the text is not 'cake'");
+        String text = "pie";
         
-        String phrase = greeting + name + goodbye;
-        
-        System.out.println(phrase);
+        if(!text.equals("cake")) {
+            System.out.println("it wasn't");
+        } else {
+            System.out.println("it was!");
+        }
     }
         
 
