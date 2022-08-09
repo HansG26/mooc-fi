@@ -18,4 +18,8 @@ public class Person {
         }
     }
     
+    public int returnAge() {
+        return this.age;
+    }
+    
 }
