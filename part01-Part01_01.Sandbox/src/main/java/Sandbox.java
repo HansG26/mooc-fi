@@ -12,6 +12,12 @@ public class Sandbox {
         ada.printPerson();
         antti.printPerson();
         martin.printPerson();
+        
+        ada.growOlder();
+        ada.growOlder();
+        
+        ada.printPerson();
+        antti.printPerson();
     }
         
 }
