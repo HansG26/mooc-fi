@@ -22,4 +22,12 @@ public class Person {
         return this.age;
     }
     
+    public boolean isOfLegalAge() {
+        return this.age >= 18;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
 }

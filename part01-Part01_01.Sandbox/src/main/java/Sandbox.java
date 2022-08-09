@@ -8,17 +8,28 @@ public class Sandbox {
         Person pekka = new Person("Pekka");
         Person antti = new Person("Antti");
         
-        pekka.growOlder();
-        pekka.growOlder();
+        int i = 0;
+        
+        while (i < 30) {
+            pekka.growOlder();
+            i++;
+        }
         
         antti.growOlder();
         
-        System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnAge());
+        System.out.println("");
         
-        int combined = pekka.returnAge() + antti.returnAge();
+        if(antti.isOfLegalAge()) {
+            System.out.println(antti.getName() + " is of legal age");
+        } else {
+            System.out.println(antti.getName() + " is underage");
+        }
         
-        System.out.println("Combined age: " + combined);
+        if(pekka.isOfLegalAge()) {
+            System.out.println(pekka.getName() + " is of legal age");
+        } else {
+            System.out.println(pekka.getName() + " is underage");
+        }
     }
         
 }
