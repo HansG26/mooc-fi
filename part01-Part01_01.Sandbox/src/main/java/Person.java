@@ -44,7 +44,7 @@ public class Person {
     }
     
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return this.name + ", age " + this.age + " years, my body index is " + this.bodyMassIndex();
     }
     
 }
