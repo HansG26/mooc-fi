@@ -5,9 +5,10 @@ public class MainProgram {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Statistics evenNumbers = new Statistics();
-        Statistics unevenNumbers = new Statistics();
         Statistics allNumbers = new Statistics();
+        Statistics evenNumbers = new Statistics();
+        Statistics oddNumbers = new Statistics();
+        
         
         System.out.println("Enter numbers:");
         
@@ -21,7 +22,7 @@ public class MainProgram {
             if (input % 2 == 0) {
                 evenNumbers.addNumber(input);
             } else {
-                unevenNumbers.addNumber(input);
+                oddNumbers.addNumber(input);
             }
             
             allNumbers.addNumber(input);
@@ -29,6 +30,6 @@ public class MainProgram {
         
         System.out.println("Sum: " + allNumbers.sum());
         System.out.println("Sum of even numbers: " + evenNumbers.sum());
-        System.out.println("Sum of uneven numbers: " + unevenNumbers.sum());
+        System.out.println("Sum of odd numbers: " + oddNumbers.sum());
     }
 }
