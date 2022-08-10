@@ -24,6 +24,11 @@ public class PaymentCard {
     }
     
     public void addMoney(double amount) {
+        
+        if(amount < 0) {
+            return;
+        }
+        
         if(amount + this.balance > 150.00) {
             this.balance = 150;
         } else {
