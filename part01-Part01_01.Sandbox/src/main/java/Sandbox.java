@@ -5,21 +5,18 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        Person pekka = new Person("Pekka");
-        Person antti = new Person("Antti");
+
+        Person matti = new Person("Matti");
+        Person juhana = new Person("Juhana");
         
-        int i = 0;
+        matti.setHeight(180);
+        matti.setWeight(86);
         
-        while (i < 30) {
-            pekka.growOlder();
-            i++;
-        }
+        juhana.setHeight(175);
+        juhana.setWeight(64);
         
-        antti.growOlder();
-        
-        System.out.println(pekka);
-        System.out.println(antti);
-        
+        System.out.println(matti.getName() + ", body mass index is " + matti.bodyMassIndex());
+        System.out.println(juhana.getName() + ", body mass index is " + juhana.bodyMassIndex());
 
     }
         
