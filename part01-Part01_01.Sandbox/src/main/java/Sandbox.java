@@ -17,19 +17,10 @@ public class Sandbox {
         
         antti.growOlder();
         
-        System.out.println("");
+        System.out.println(pekka);
+        System.out.println(antti);
         
-        if(antti.isOfLegalAge()) {
-            System.out.println(antti.getName() + " is of legal age");
-        } else {
-            System.out.println(antti.getName() + " is underage");
-        }
-        
-        if(pekka.isOfLegalAge()) {
-            System.out.println(pekka.getName() + " is of legal age");
-        } else {
-            System.out.println(pekka.getName() + " is underage");
-        }
+
     }
         
 }

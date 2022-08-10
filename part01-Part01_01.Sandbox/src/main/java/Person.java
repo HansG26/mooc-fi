@@ -8,10 +8,6 @@ public class Person {
         this.age = 0;
     }
     
-    public void printPerson() {
-        System.out.println(this.name + ", age " + this.age + " years");
-    }
-    
     public void growOlder() {
         if(this.age < 30) {
             age++;
@@ -28,6 +24,10 @@ public class Person {
     
     public String getName() {
         return this.name;
+    }
+    
+    public String toString() {
+        return this.name + ", age " + this.age + " years";
     }
     
 }
