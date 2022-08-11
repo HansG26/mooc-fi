@@ -16,7 +16,10 @@ public class Sandbox {
                 break;
             }
             
-            persons.add(new Person(name));
+            System.out.println("Enter a age: ");
+            int age = Integer.valueOf(scanner.nextLine());
+            
+            persons.add(new Person(name, age));
         }
         
         System.out.println("");
