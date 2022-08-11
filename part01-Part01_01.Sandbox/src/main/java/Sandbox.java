@@ -6,18 +6,26 @@ public class Sandbox {
 
     public static void main(String[] args) {
 
-        Person matti = new Person("Matti");
-        Person juhana = new Person("Juhana");
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Person> persons = new ArrayList<>();
         
-        matti.setHeight(180);
-        matti.setWeight(86);
+        while (true) {
+            System.out.println("Enter a name, empty will stop: ");
+            String name = scanner.nextLine();
+            if (name.isEmpty()) {
+                break;
+            }
+            
+            persons.add(new Person(name));
+        }
         
-        juhana.setHeight(175);
-        juhana.setWeight(64);
+        System.out.println("");
+        System.out.println("Persons in total: " + persons.size());
+        System.out.println("Persons: ");
         
-        System.out.println(matti.getName() + ", body mass index is " + matti.bodyMassIndex());
-        System.out.println(juhana.getName() + ", body mass index is " + juhana.bodyMassIndex());
-
+        for(Person person : persons) {
+            System.out.println(person);
+        }
     }
         
 }
