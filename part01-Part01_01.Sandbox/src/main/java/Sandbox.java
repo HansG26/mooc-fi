@@ -14,6 +14,9 @@ public class Sandbox {
             if (line.equals("end")) {
                 break;
             }
+            
+            int number = Integer.valueOf(line);
+            System.out.println(row);
         }
 
     }
