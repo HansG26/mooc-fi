@@ -7,17 +7,17 @@ public class Sandbox {
 
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> lines = new ArrayList<>();
         
         try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
-            
             while(scanner.hasNextLine()) {
-                String row = scanner.nextLine();
-                System.out.println(row);
+                lines.add(scanner.nextLine());
             }
         } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            System.out.println(e);
         }
+        
+        System.out.println("Total lines: " + lines.size());
     }
         
 }
