@@ -1,4 +1,5 @@
 
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -8,17 +9,15 @@ public class Sandbox {
 
         Scanner scanner = new Scanner(System.in);
         
-        while (true) {
-            String line = scanner.nextLine();
+        try (Scanner scanner = new Scanner(Paths.get("file.txt"))) {
             
-            if (line.equals("end")) {
-                break;
+            while(scanner.hasNextLine()) {
+                String row = scanner.nextLine();
+                System.out.println(row);
             }
-            
-            int number = Integer.valueOf(line);
-            System.out.println(row);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
         }
-
     }
         
 }
