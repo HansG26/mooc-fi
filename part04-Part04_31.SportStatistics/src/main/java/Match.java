@@ -21,6 +21,14 @@ public class Match {
         return this.visitingTeam;
     }
     
+    public int getHomePoints() {
+        return this.homePoints;
+    }
+    
+    public int getAwayPoints() {
+        return this.awayPoints;
+    }
+    
     @Override
     public String toString() {
         return this.homeTeam + ", " + this.visitingTeam + ", " + this.homePoints + ", " + this.awayPoints;
