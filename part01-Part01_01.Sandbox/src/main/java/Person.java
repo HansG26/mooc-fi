@@ -9,7 +9,7 @@ public class Person {
     public Person(String name) {
         this(name, 0);
     }
-    
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -21,8 +21,12 @@ public class Person {
         System.out.println(this.name + " is " + this.age + " years old");
     }
 
+    public void growOlder(int years) {
+        this.age += years;
+    }
+
     public void growOlder() {
-        this.age++;
+        this.growOlder(1);
     }
 
     public boolean isAdult() {
@@ -38,23 +42,23 @@ public class Person {
     public String toString() {
         return this.name + " is " + this.age + " years old, their BMI is " + this.bodyMassIndex();
     }
-    
+
     public void setHeight(int height) {
         this.height = height;
     }
-    
+
     public int getHeight() {
         return this.height;
     }
-    
+
     public void setWeight(int weight) {
         this.weight = weight;
     }
-    
+
     public int getWeight() {
         return this.weight;
     }
-    
+
     public String getName() {
         return this.name;
     }
