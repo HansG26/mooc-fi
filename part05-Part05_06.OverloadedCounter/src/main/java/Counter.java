@@ -14,11 +14,19 @@ public class Counter {
         return this.value;
     }
     
+    public void increase(int increaseBy) {
+        this.value += increaseBy;
+    }
+    
     public void increase() {
-        this.value++;
+        this.increase(1);
+    }
+    
+    public void decrease(int decreaseBy) {
+        this.value -= decreaseBy;
     }
     
     public void decrease() {
-        this.value--;
+        this.decrease(1);
     }
 }
