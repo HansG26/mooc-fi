@@ -3,45 +3,26 @@ public class Person {
 
     private String name;
     private int age;
-    private int weight;
-    private int height;
+    private double weight;
+    private double height;
 
-    public Person(String name, int age) {
+    public Person(String name, int age, double weight, double height) {
         this.name = name;
         this.age = age;
-        this.weight = 0;
-        this.height = 0;
-    }
-
-    public void setHeight(int newHeight) {
-        this.height = newHeight;
-    }
-
-    public void setWeight(int newWeight) {
-        this.weight = newWeight;
+        this.weight = weight;
+        this.height = height;
     }
 
     public double bodyMassIndex() {
-        double heightPerHundred = this.height / 100.0;
-        return this.weight / (heightPerHundred * heightPerHundred);
+        return this.weight / (this.height * this.height);
     }
-
-    public void growOlder() {
-        if (this.age < 30) {
-            age++;
-        }
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public String getName() {
-        return this.name;
+    
+    public double maximumHeartRate() {
+        return 206.3 - (0.711 * this.age);
     }
 
     public String toString() {
-        return this.name + ", age " + this.age + " years, my body index is " + this.bodyMassIndex();
+        return this.name + ", BMI " + this.bodyMassIndex() + ", maximum heart rate: " + this.maximumHeartRate();
     }
 
 }

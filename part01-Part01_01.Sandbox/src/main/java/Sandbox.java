@@ -7,12 +7,14 @@ public class Sandbox {
 
     public static void main(String[] args) {
         
-        Clock clock = new Clock();
+        Rectangle first = new Rectangle(40, 80);
+        Rectangle rectangle = new Rectangle(10, 10);
+        System.out.println(first);
+        System.out.println(rectangle);
         
-        while (true) {
-            System.out.println(clock);
-            clock.advance();
-        }
+        first.narrow();
+        System.out.println(first);
+        System.out.println(first.surfaceArea());
     }
         
 }
