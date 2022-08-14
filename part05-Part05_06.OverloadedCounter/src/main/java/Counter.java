@@ -15,7 +15,9 @@ public class Counter {
     }
     
     public void increase(int increaseBy) {
-        this.value += increaseBy;
+        if(increaseBy > 0) {
+            this.value += increaseBy;
+        }
     }
     
     public void increase() {
@@ -23,7 +25,9 @@ public class Counter {
     }
     
     public void decrease(int decreaseBy) {
-        this.value -= decreaseBy;
+        if(decreaseBy > 0) {
+            this.value -= decreaseBy;
+        }
     }
     
     public void decrease() {
