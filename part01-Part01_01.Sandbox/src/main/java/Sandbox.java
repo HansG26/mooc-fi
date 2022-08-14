@@ -6,15 +6,11 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
+        Person paul = new Person("Paul", 24);
+        Person ada = new Person("Ada");
         
-        Rectangle first = new Rectangle(40, 80);
-        Rectangle rectangle = new Rectangle(10, 10);
-        System.out.println(first);
-        System.out.println(rectangle);
-        
-        first.narrow();
-        System.out.println(first);
-        System.out.println(first.surfaceArea());
+        System.out.println(paul);
+        System.out.println(ada);
     }
         
 }
