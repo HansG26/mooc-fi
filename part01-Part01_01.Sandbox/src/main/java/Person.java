@@ -6,31 +6,20 @@ public class Person {
     private int weight;
     private int height;
 
-    public Person(String name) {
-        this(name, 0);
-    }
-
-    public Person(String name, int age) {
+    public Person(String name, int age, int weight, int height) {
         this.name = name;
         this.age = age;
-        this.weight = 0;
-        this.height = 0;
+        this.weight = weight;
+        this.height = height;
     }
 
-    public void printPerson() {
-        System.out.println(this.name + " is " + this.age + " years old");
+    public Person(String name) {
+        this(name, 0, 0, 0);
     }
 
-    public void growOlder(int years) {
-        this.age += years;
-    }
 
     public void growOlder() {
-        this.growOlder(1);
-    }
-
-    public boolean isAdult() {
-        return this.age >= 18;
+        this.age++;
     }
 
     public double bodyMassIndex() {
@@ -61,6 +50,10 @@ public class Person {
 
     public String getName() {
         return this.name;
+    }
+    
+    public int getAge() {
+        return this.age;
     }
 
 }
