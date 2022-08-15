@@ -6,20 +6,29 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        Person joan = new Person("Joan Ball");
-        System.out.println(joan);
+        Person matt = new Person("Matt");
+        matt.setWeight(86);
+        matt.setHeight(180);
         
-        Person ball = joan;
-        ball.growOlder();
-        ball.growOlder();
+        Person jasper = new Person("Jasper");
+        jasper.setWeight(34);
+        jasper.setHeight(132);
         
-        System.out.println(joan);
+        AmusementParkRide waterTrack = new AmusementParkRide("Water track", 140);
         
-        joan = new Person("Joan B;");
-        System.out.println(joan);
+        if (waterTrack.allowedToRide(matt)) {
+            System.out.println(matt.getName() + " may enter the ride");
+        } else {
+            System.out.println(matt.getName() + " may not enter the ride");
+        }
         
-        ball = null;
-        ball.growOlder();
+        if (waterTrack.allowedToRide(jasper)) {
+            System.out.println(jasper.getName() + " may enter the ride");
+        } else {
+            System.out.println(jasper.getName() + " may not enter the ride");
+        }
+        
+        System.out.println(waterTrack);
     }
         
 }
