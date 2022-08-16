@@ -1,11 +1,9 @@
 
 public class PaymentTerminal {
 
-
     private double money;  // amount of cash
     private int affordableMeals; // number of sold affordable meals
     private int heartyMeals;  // number of sold hearty meals
-
 
     public PaymentTerminal() {
         this.money = 1000;
@@ -18,7 +16,7 @@ public class PaymentTerminal {
         if (payment < 2.5) {
             return payment;
         }
-        affordableMeals++;
+        this.affordableMeals++;
         this.money += 2.5;
         return payment - 2.5;
     }
@@ -30,11 +28,28 @@ public class PaymentTerminal {
         if (payment < 4.3) {
             return payment;
         }
-        heartyMeals++;
+        this.heartyMeals++;
         this.money += 4.3;
         return payment - 4.3;
     }
 
+    public boolean eatAffordably(PaymentCard card) {
+        if (card.takeMoney(2.5)) {
+            this.affordableMeals++;
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        if (card.takeMoney(4.3)) {
+            this.heartyMeals++;
+            return true;
+        }
+
+        return false;
+    }
 
     @Override
     public String toString() {
