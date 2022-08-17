@@ -12,17 +12,24 @@ public class Person {
         this.weight = weight;
         this.height = height;
     }
-    
+
     public Person(String name, SimpleDate birthday) {
         this(name, birthday, 0, 0);
     }
-    
+
     public Person(String name, int day, int month, int year) {
         this.name = name;
         this.birthday = new SimpleDate(day, month, year);
     }
 
-    
+    public boolean olderThan(Person compared) {
+        if (this.birthday.before(compared.getBirthday())) {
+            return true;
+        }
+        
+        return false;
+    }
+
     public double bodyMassIndex() {
         double heightInMeters = this.height / 100.0;
 
@@ -53,5 +60,8 @@ public class Person {
         return this.name;
     }
 
+    public SimpleDate getBirthday() {
+        return this.birthday;
+    }
 
 }
