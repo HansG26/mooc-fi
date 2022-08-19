@@ -25,7 +25,11 @@ public class Main {
             }
             
             Item item = new Item(identifier, name);
-            archive.add(item);
+            
+            if (!(archive.contains(item))) {
+                archive.add(item);
+            }
+            
         }
         
         for (Item item : archive) {
