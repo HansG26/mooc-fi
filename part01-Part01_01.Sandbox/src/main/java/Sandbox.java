@@ -7,17 +7,34 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        ArrayList<Bird> birds = new ArrayList<>();
+        Bird red = new Bird("Red");
         
-        System.out.println("Enter two words, each on its own line.");
-        String first = scanner.nextLine();
-        String second = scanner.nextLine();
-        
-        if (first.equals(second)) {
-            System.out.println("The words were the same.");
+        if(birds.contains(red)) {
+            System.out.println("Red is on the list.");
         } else {
-            System.out.println("The words were not the same.");
+            System.out.println("Red is not on the list.");
         }
+        
+        birds.add(red);
+        
+        if(birds.contains(red)) {
+            System.out.println("Red is on the list.");
+        } else {
+            System.out.println("Red is not on the list.");
+        }
+        
+        System.out.println("However!");
+        
+        red = new Bird("Red");
+        
+        if(birds.contains(red)) {
+            System.out.println("Red is on the list.");
+        } else {
+            System.out.println("Red is not on the list.");
+        }
+        
+        System.out.println(birds);
     }
 
 }
