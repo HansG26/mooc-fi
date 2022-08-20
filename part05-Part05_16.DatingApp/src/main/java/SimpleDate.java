@@ -53,5 +53,12 @@ public class SimpleDate {
             advance();
         }
     }
+    
+    public SimpleDate afterNumberOfDays(int days) {
+        SimpleDate advancedDate = new SimpleDate(this.day, this.month, this.year);
+        advancedDate.advance(days);
+        
+        return advancedDate;
+    }
 
 }
