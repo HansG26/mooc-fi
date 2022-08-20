@@ -47,5 +47,11 @@ public class SimpleDate {
             }
         }
     }
+    
+    public void advance(int howManyDays) {
+        for (int i = 0; i < howManyDays; i++) {
+            advance();
+        }
+    }
 
 }
