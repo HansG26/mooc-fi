@@ -7,34 +7,29 @@ import java.util.ArrayList;
 public class Sandbox {
 
     public static void main(String[] args) {
-        ArrayList<Bird> birds = new ArrayList<>();
-        Bird red = new Bird("Red");
+        Counter counter = new Counter();
+        counter.increase();
+        counter.increase();
         
-        if(birds.contains(red)) {
-            System.out.println("Red is on the list.");
-        } else {
-            System.out.println("Red is not on the list.");
-        }
+        System.out.println(counter);
         
-        birds.add(red);
+        Counter clone = counter.clone();
         
-        if(birds.contains(red)) {
-            System.out.println("Red is on the list.");
-        } else {
-            System.out.println("Red is not on the list.");
-        }
+        System.out.println(counter);
+        System.out.println(clone);
         
-        System.out.println("However!");
+        counter.increase();
+        counter.increase();
+        counter.increase();
+        counter.increase();
         
-        red = new Bird("Red");
+        System.out.println(counter);
+        System.out.println(clone);
         
-        if(birds.contains(red)) {
-            System.out.println("Red is on the list.");
-        } else {
-            System.out.println("Red is not on the list.");
-        }
+        clone.increase();
         
-        System.out.println(birds);
+        System.out.println(counter);
+        System.out.println(clone);
     }
 
 }
