@@ -31,5 +31,15 @@ public class Money {
 
         return this.euros + "." + zero + this.cents + "e";
     }
+    
+    public Money plus(Money addition) {
+        
+        int newEuros = this.euros + addition.euros;
+        int newCents = this.cents + addition.cents;
+        
+        Money money = new Money(newEuros, newCents);
+        
+        return money;
+    }
 
 }
