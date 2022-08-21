@@ -54,5 +54,26 @@ public class Money {
         return true;
         
     }
+    
+    public Money minus(Money decreaser) {
+        
+        if (decreaser.euros > this.euros) {
+            return new Money(0, 0);
+        }
+        
+        if (decreaser.euros == this.euros && decreaser.cents > this.cents) {
+            return new Money(0, 0);
+        }
+        
+        int newEuros = this.euros - decreaser.euros;
+        int newCents = this.cents - decreaser.cents;
+        
+        if (newCents < 0) {
+            newEuros--;
+            newCents = 100 + newCents;
+        }
+        
+        return new Money(newEuros, newCents);
+    }
 
 }
