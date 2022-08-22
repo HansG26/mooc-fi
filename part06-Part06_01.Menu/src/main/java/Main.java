@@ -9,5 +9,10 @@ public class Main {
         menu.addMeal("Meatballs with mustard sauce");
 
         menu.printMeals();
+        menu.clearMenu();
+
+        System.out.println();
+        menu.addMeal("Tomato and mozzarella salad");
+        menu.printMeals();
     }
 }
