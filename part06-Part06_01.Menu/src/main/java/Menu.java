@@ -10,4 +10,12 @@ public class Menu {
     }
 
     // implement the required methods here
+    public void addMeal(String meal) {
+        if (this.meals.contains(meal)) {
+            return;
+        }
+        
+        this.meals.add(meal);
+    }
+        
 }
