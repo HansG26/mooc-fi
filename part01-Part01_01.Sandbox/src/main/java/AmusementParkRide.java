@@ -14,6 +14,24 @@ public class AmusementParkRide {
         this.visitors = 0;
         this.riding = new ArrayList<>();
     }
+    
+    public void removeEveryoneOnRide() {
+        this.riding.clear();
+    }
+    
+    public double averageHeightOfPeopleOnRide() {
+        if (this.riding.isEmpty()) {
+            return -1;
+        }
+        
+        int sumOfHeights = 0;
+        
+        for (Person per: riding) {
+            sumOfHeights += per.getHeight();
+        }
+        
+        return (double) sumOfHeights / this.riding.size();
+    }
 
     public boolean isAllowedOn(Person person) {
         if (person.getHeight() > lowestHeight) {
@@ -40,7 +58,7 @@ public class AmusementParkRide {
             onTheRide = onTheRide + person.getName() + "\n";
         }
         
-        return printOutput + "\n" + "on the ride: \n" + onTheRide;
+        return printOutput + "on the ride: \n" + onTheRide;
 
     }
 
