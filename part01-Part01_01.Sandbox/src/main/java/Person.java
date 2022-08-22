@@ -21,6 +21,10 @@ public class Person {
         this.name = name;
         this.birthday = new SimpleDate(day, month, year);
     }
+    
+    public Person(String name) {
+        this(name, new SimpleDate(1, 1, 1), 0, 0);
+    }
 
     public boolean olderThan(Person compared) {
         if (this.birthday.before(compared.getBirthday())) {
