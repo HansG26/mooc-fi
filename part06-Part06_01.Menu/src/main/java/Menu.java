@@ -17,5 +17,11 @@ public class Menu {
         
         this.meals.add(meal);
     }
+    
+    public void printMeals() {
+        for(String meal: this.meals) {
+            System.out.println(meal);
+        }
+    }
         
 }
