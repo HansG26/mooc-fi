@@ -24,6 +24,11 @@ public class Sandbox {
 
         System.out.println(hurjakuru);
         System.out.println(hurjakuru.averageHeightOfPeopleOnRide());
+        
+        System.out.println();
+        System.out.println(hurjakuru.getTallest().getName());
+        Person tallest = hurjakuru.getTallest();
+        System.out.println(tallest.getName());
     }
 
 }

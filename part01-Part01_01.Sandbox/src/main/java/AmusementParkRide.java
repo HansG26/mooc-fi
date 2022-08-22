@@ -32,6 +32,22 @@ public class AmusementParkRide {
         
         return (double) sumOfHeights / this.riding.size();
     }
+    
+    public Person getTallest() {
+        if (this.riding.isEmpty()) {
+            return null;
+        }
+        
+        Person returnObject = this.riding.get(0);
+        
+        for (Person prs: riding) {
+            if(prs.getHeight() > returnObject.getHeight()) {
+                returnObject = prs;
+            }
+        }
+        
+        return returnObject;
+    }
 
     public boolean isAllowedOn(Person person) {
         if (person.getHeight() > lowestHeight) {
