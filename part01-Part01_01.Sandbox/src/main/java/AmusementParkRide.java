@@ -1,18 +1,24 @@
 
+import java.util.ArrayList;
+
+
 public class AmusementParkRide {
     private String name;
     private int lowestHeight;
     private int visitors;
+    private ArrayList<Person> riding;
     
     public AmusementParkRide(String name, int lowestHeight) {
         this.name = name;
         this.lowestHeight = lowestHeight;
         this.visitors = 0;
+        this.riding = new ArrayList<>();
     }
     
-    public boolean allowedToRide(Person person) {
+    public boolean isAllowedOn(Person person) {
         if (person.getHeight() > lowestHeight) {
             this.visitors++;
+            riding.add(person);
             return true;
         }
         
