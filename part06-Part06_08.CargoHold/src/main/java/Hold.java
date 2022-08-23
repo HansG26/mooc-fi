@@ -12,7 +12,7 @@ public class Hold {
     }
 
     public void addSuitcase(Suitcase suitcase) {
-        
+
         int weightSuitcase = suitcase.totalWeight();
         int currentWeightHold = 0;
 
@@ -34,5 +34,11 @@ public class Hold {
         }
 
         return this.suitcases.size() + " suitcases" + " (" + currentWeightHold + " kg)";
+    }
+
+    public void printItems() {
+        for (Suitcase suitc : this.suitcases) {
+            suitc.printItems();
+        }
     }
 }
