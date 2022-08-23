@@ -25,8 +25,8 @@ public class Suitcase {
     }
 
     public String toString() {
-        
-        if(this.items.isEmpty()) {
+
+        if (this.items.isEmpty()) {
             return "no items (0 kg)";
         }
 
@@ -35,11 +35,28 @@ public class Suitcase {
         for (Item itm : this.items) {
             currentWeightSuitcase += itm.getWeight();
         }
-        
-        if(this.items.size() == 1) {
+
+        if (this.items.size() == 1) {
             return "1 item (" + currentWeightSuitcase + " kg)";
         }
 
         return this.items.size() + " items" + " (" + currentWeightSuitcase + " kg)";
+    }
+
+    public void printItems() {
+        for (Item item : this.items) {
+            System.out.println(item);
+        }
+    }
+
+    public int totalWeight() {
+        
+        int currentWeightSuitcase = 0;
+        
+        for (Item itm : this.items) {
+            currentWeightSuitcase += itm.getWeight();
+        }
+        
+        return currentWeightSuitcase;
     }
 }
