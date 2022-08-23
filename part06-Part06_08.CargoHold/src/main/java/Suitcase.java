@@ -51,6 +51,10 @@ public class Suitcase {
 
     public int totalWeight() {
         
+        if(this.items.isEmpty()) {
+            return 0;
+        }
+        
         int currentWeightSuitcase = 0;
         
         for (Item itm : this.items) {
