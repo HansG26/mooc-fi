@@ -11,10 +11,17 @@ public class Main {
         room.add(new Person("Nina", 172));
         room.add(new Person("Terhi", 185));
         System.out.println("Empty room?" + room.isEmpty());
-        
+
         System.out.println("");
-        
-        for (Person person: room.getPersons()) {
+
+        for (Person person : room.getPersons()) {
+            System.out.println(person);
+        }
+
+        System.out.println();
+        System.out.println("Shortest: " + room.shortest());
+        System.out.println("");
+        for (Person person : room.getPersons()) {
             System.out.println(person);
         }
     }
