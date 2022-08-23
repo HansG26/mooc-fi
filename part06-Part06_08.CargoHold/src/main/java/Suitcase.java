@@ -25,13 +25,21 @@ public class Suitcase {
     }
 
     public String toString() {
+        
+        if(this.items.isEmpty()) {
+            return "no items (0 kg)";
+        }
 
         int currentWeightSuitcase = 0;
 
         for (Item itm : this.items) {
             currentWeightSuitcase += itm.getWeight();
         }
+        
+        if(this.items.size() == 1) {
+            return "1 item (" + currentWeightSuitcase + " kg)";
+        }
 
-        return this.items.size() + " items " + " (" + currentWeightSuitcase + " kg)";
+        return this.items.size() + " items" + " (" + currentWeightSuitcase + " kg)";
     }
 }
