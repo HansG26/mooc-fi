@@ -19,7 +19,7 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("Shortest: " + room.shortest());
+        System.out.println("Shortest: " + room.take());
         System.out.println("");
         for (Person person : room.getPersons()) {
             System.out.println(person);

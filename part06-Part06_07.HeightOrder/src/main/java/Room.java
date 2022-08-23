@@ -36,4 +36,15 @@ public class Room {
         
         return returnObj;
     }
+    
+    public Person take() {
+        if(persons.isEmpty()) {
+            return null;
+        }
+        
+        Person returnObj = this.shortest();
+        this.persons.remove(returnObj);
+        
+        return returnObj;
+    }
 }
