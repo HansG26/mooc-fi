@@ -1,12 +1,14 @@
 AmusementParkRide.class
 SimpleDate.class
+ClockHand.class
+UserInterface.class
+Clock.class
+Counter.class
+WordSet.class
 Rectangle.class
 Sandbox.class
-ClockHand.class
 Playlist.class
 Bird.class
 Person.class
 Teacher.class
 Name.class
-Clock.class
-Counter.class
