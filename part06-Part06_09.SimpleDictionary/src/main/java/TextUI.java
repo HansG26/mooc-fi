@@ -30,6 +30,22 @@ public class TextUI {
                 this.simpleDictionary.add(word, tanslation);
                 continue;
             }
+            
+            if(command.equals("search")) {
+                System.out.println("To be translated:");
+                String word = this.scanner.nextLine();
+                
+                String translation = this.simpleDictionary.translate(word);
+                
+                if(translation == null) {
+                    System.out.println("Word " + word + " was not found");
+                } else {
+                    System.out.println("Translation: " + translation);
+                }
+                
+    
+                continue;
+            }
 
             System.out.println("Unknown command");
         }
