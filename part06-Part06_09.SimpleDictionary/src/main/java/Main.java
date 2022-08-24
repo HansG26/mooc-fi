@@ -9,5 +9,6 @@ public class Main {
         
         TextUI ui = new TextUI(scanner, dictionary);
         ui.start();
+        System.out.println(dictionary.translate("pike"));
     }
 }

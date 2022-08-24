@@ -20,6 +20,16 @@ public class TextUI {
                 System.out.println("Bye Bye!");
                 return;
             }
+            
+            if(command.equals("add")) {
+                System.out.println("Word:");
+                String word = this.scanner.nextLine();
+                System.out.println("Translation:");
+                String tanslation = this.scanner.nextLine();
+                
+                this.simpleDictionary.add(word, tanslation);
+                continue;
+            }
 
             System.out.println("Unknown command");
         }
